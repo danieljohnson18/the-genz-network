@@ -12,7 +12,7 @@ const FounderSection = () => {
           <div className="order-2 md:order-1">
             <div className="aspect-[3/4] bg-gray-300 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&crop=faces"
+                src="https://genzphere.netlify.app/images/founder1.png"
                 alt="Gift Chinonso Agodi, Founder"
                 className="w-full h-full object-cover"
               />

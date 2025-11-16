@@ -20,11 +20,11 @@ const Hero = () => {
               letterSpacing: "-0.02em"
             }}
           >
-            Working with visionaries on the frontlines of social change worldwide
+           A Successive Generation of Light Because I exist
           </h1>
 
           <p className="text-lg md:text-xl mb-8 leading-relaxed max-w-xl">
-            We're building a world where everyone has the power to shape their lives.
+            ✨ We commit to positivity, empowerment, and change.
           </p>
 
           <div>
