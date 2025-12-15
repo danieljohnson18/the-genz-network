@@ -106,11 +106,11 @@ const Header = () => {
                   <div className="absolute top-full left-0 mt-0 w-64 bg-white shadow-lg border border-gray-200">
                     {item.items.map((subItem) => (
                       <a
-                        key={typeof subItem === 'string' ? subItem : subItem.label}
-                        href={typeof subItem === 'string' ? `#${subItem.toLowerCase().replace(/\s+/g, "-")}` : subItem.href}
+                        key={subItem.label}
+                        href={subItem.href}
                         className="block px-4 py-3 text-sm hover:bg-gray-100 no-underline transition-colors"
                       >
-                        {typeof subItem === 'string' ? subItem : subItem.label}
+                        {subItem.label}
                       </a>
                     ))}
                   </div>
@@ -144,12 +144,12 @@ const Header = () => {
                 <div className="pl-4 space-y-2">
                   {item.items.map((subItem) => (
                     <a
-                      key={typeof subItem === 'string' ? subItem : subItem.label}
-                      href={typeof subItem === 'string' ? `#${subItem.toLowerCase().replace(/\s+/g, "-")}` : subItem.href}
+                      key={subItem.label}
+                      href={subItem.href}
                       className="block text-sm text-gray-600 no-underline hover:text-black"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      {typeof subItem === 'string' ? subItem : subItem.label}
+                      {subItem.label}
                     </a>
                   ))}
                 </div>
