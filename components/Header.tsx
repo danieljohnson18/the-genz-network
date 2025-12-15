@@ -21,46 +21,47 @@ const Header = () => {
     {
       title: "What We Do",
       items: [
-        "Mentorship Programs",
-        "Workshops & Events",
-        "Community Service",
-        "Global Initiatives",
+        { label: "Mentorship Programs", href: "#mentorship-programs" },
+        { label: "Workshops & Events", href: "#workshops-events" },
+        { label: "Community Service", href: "#community-service" },
+        { label: "Global Initiatives", href: "#global-initiatives" },
       ],
     },
     {
       title: "Where We Work",
       items: [
-        "North America",
-        "Africa",
-        "Asia",
-        "Europe",
+        { label: "North America", href: "#north-america" },
+        { label: "Africa", href: "#africa" },
+        { label: "Asia", href: "#asia" },
+        { label: "Europe", href: "#europe" },
       ],
     },
     {
       title: "Our Learnings",
       items: [
-        "Research",
-        "Reports",
-        "Insights",
-        "Case Studies",
+        { label: "Research", href: "#research" },
+        { label: "Reports", href: "#reports" },
+        { label: "Insights", href: "#insights" },
+        { label: "Case Studies", href: "#case-studies" },
       ],
     },
     {
       title: "News & Stories",
       items: [
-        "Latest News",
-        "Impact Stories",
-        "Blog",
-        "Press",
+        { label: "Latest News", href: "#latest-news" },
+        { label: "Impact Stories", href: "#impact-stories" },
+        { label: "Blog", href: "#blog" },
+        { label: "Press", href: "#press" },
       ],
     },
     {
       title: "About Us",
       items: [
-        "Our Founder",
-        "Leadership",
-        "Mission",
-        "Contact",
+        { label: "About", href: "/about" },
+        { label: "Our Founder", href: "#founder" },
+        { label: "Leadership", href: "#leadership" },
+        { label: "Mission", href: "#mission" },
+        { label: "Contact", href: "#contact" },
       ],
     },
   ];
@@ -76,7 +77,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo - Text Only like Ford Foundation */}
           <a
-            href="#"
+            href="/"
             className="text-xl md:text-2xl font-semibold no-underline hover:opacity-70 leading-tight"
             style={{ fontFamily: "var(--font-heading)" }}
           >
@@ -105,11 +106,11 @@ const Header = () => {
                   <div className="absolute top-full left-0 mt-0 w-64 bg-white shadow-lg border border-gray-200">
                     {item.items.map((subItem) => (
                       <a
-                        key={subItem}
-                        href={`#${subItem.toLowerCase().replace(/\s+/g, "-")}`}
+                        key={typeof subItem === 'string' ? subItem : subItem.label}
+                        href={typeof subItem === 'string' ? `#${subItem.toLowerCase().replace(/\s+/g, "-")}` : subItem.href}
                         className="block px-4 py-3 text-sm hover:bg-gray-100 no-underline transition-colors"
                       >
-                        {subItem}
+                        {typeof subItem === 'string' ? subItem : subItem.label}
                       </a>
                     ))}
                   </div>
@@ -143,12 +144,12 @@ const Header = () => {
                 <div className="pl-4 space-y-2">
                   {item.items.map((subItem) => (
                     <a
-                      key={subItem}
-                      href={`#${subItem.toLowerCase().replace(/\s+/g, "-")}`}
+                      key={typeof subItem === 'string' ? subItem : subItem.label}
+                      href={typeof subItem === 'string' ? `#${subItem.toLowerCase().replace(/\s+/g, "-")}` : subItem.href}
                       className="block text-sm text-gray-600 no-underline hover:text-black"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      {subItem}
+                      {typeof subItem === 'string' ? subItem : subItem.label}
                     </a>
                   ))}
                 </div>

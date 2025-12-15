@@ -4,6 +4,8 @@ import MissionStatement from "@/components/MissionStatement";
 import FeaturedContent from "@/components/FeaturedContent";
 import ProgramsSection from "@/components/ProgramsSection";
 import PriorityAreas from "@/components/PriorityAreas";
+import OrganizationValues from "@/components/OrganizationValues";
+import OrganizationMap from "@/components/OrganizationMap";
 import ImpactStats from "@/components/ImpactStats";
 import NewsStories from "@/components/NewsStories";
 import FounderSection from "@/components/FounderSection";
@@ -18,6 +20,8 @@ export default function Home() {
       <FeaturedContent />
       <ProgramsSection />
       <PriorityAreas />
+      {/* <OrganizationValues /> */}
+      {/* <OrganizationMap /> */}
       <ImpactStats />
       <NewsStories />
       <FounderSection />

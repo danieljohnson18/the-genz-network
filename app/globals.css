@@ -159,6 +159,17 @@
     border-color: var(--color-gray-900);
   }
 
+  .btn-outline {
+    background: transparent;
+    color: var(--color-black);
+    border-color: var(--color-black);
+  }
+
+  .btn-outline:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+
   /* Section Spacing */
   .section {
     padding: clamp(3rem, 8vw, 6rem) 0;
